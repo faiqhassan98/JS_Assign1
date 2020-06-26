@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .main{
+            border: 2px solid gray;
+            width: 200px;
+            margin: 0 auto;
+        }
+        input{
+            width:  95%;
+            background: gray;
+            color: white;
+        }
+        .C{
+            width: 100%;
+            margin-top: 10px;
+            background: #f9f9f9;
+        }
+
+
+
+
+        .halfbtn{
+            background: #f9f9f9;
+            width: 98px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div  class="main">
+        <div>
+            <input id="result" type="text">
+        </div>
+        <div>
+            <button onclick="clearResult()" class="C">C</button>
+        </div>
+        <div>
+            <button onclick="getNumber('7')">7</button>
+            <button onclick="getNumber('8')">8</button>
+            <button onclick="getNumber('9')">9</button>
+            <button onclick="getNumber('*')">x</button>
+        </div>
+        <div>
+            <button onclick="getNumber('4')">4</button>
+            <button onclick="getNumber('5')">5</button>
+            <button onclick="getNumber('6')">6</button>
+            <button onclick="getNumber('-')">-</button>
+        </div>
+        <div>
+            <button onclick="getNumber('1')">1</button>
+            <button onclick="getNumber('2')">2</button>
+            <button onclick="getNumber('3')">3</button>
+            <button onclick="getNumber('+')">+</button>
+        </div>
+        <div>
+            <button onclick="getNumber('0')" class="halfbtn">0</button>
+            <button onclick="getResult('')" class="halfbtn">=</button>
+       </div>
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    <script>
+    function getNumber(num){
+        var result = document.getElementById("result");
+        result.value += num;
+    }
+    
+    function clearResult(){
+        var result = document.getElementById("result");
+        result.value = ""
+    }
+    
+    function getResult(){
+        var result = document.getElementById("result");
+        result.value = eval(result.value);
+    }
+    </script>
+</body>
+</html>
